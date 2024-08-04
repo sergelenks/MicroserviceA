@@ -78,4 +78,19 @@ The microservice will respond with a JSON-formatted message containing the sorte
     }
 }
 
+UML Sequence Diagram
+
+
+Client                    ZeroMQ Socket               Microservice
+  |                             |                          |
+  |---(1) send_json(request)--->|                          |
+  |                             |---(2) recv_json()------->|
+  |                             |                          |
+  |                             |                          |
+  |                             |                          |
+  |                             |<-(3) send_json(response)-|
+  |<-(4) recv_json()------------|                          |
+  |                             |                          |
+
+
 
